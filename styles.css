@@ -1,13 +1,110 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
+:root {
+  --color-1: #111012;
+  --text-color: #f2c744;
+  --accent-color: #614000;
+}
+
 * {
   margin: 0;
   padding: 0%;
   box-sizing: border-box;
 }
 
+html {
+  font-size: 14px;
+  font-family: Montserrat, Sergoe UI, Tahoma, sans-serif;
+}
+
 body {
-  font-family: "Montserrat";
   background-color: #1c1918;
   color: rgb(246, 234, 219);
+}
+
+nav {
+  background-color: var(--color-1);
+  height: 60px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.links-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+nav a {
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-color);
+}
+nav a:hover {
+  background-color: var(--accent-color);
+}
+
+nav .home-link {
+  margin-right: auto;
+}
+
+nav svg {
+  fill: var(--text-color);
+}
+
+#sidebar-active {
+  display: none;
+}
+
+.open-sidebar-button,
+.close-sidebar-button {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .links-container {
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    transition: 0.75s ease-out;
+    z-index: 10;
+    width: 300px;
+    background-color: var(--color-1);
+    box-shadow: 0.5px 0 5px rgba(0 0 0 0.25);
+  }
+
+  nav a {
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 20px 30px;
+    justify-content: flex-start;
+  }
+
+  .open-sidebar-button,
+  .close-sidebar-button {
+    display: block;
+    padding: 20px;
+  }
+
+  #sidebar-active:checked ~ .links-container {
+    right: 0;
+  }
+
+  #sidebar-active:checked ~ #overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+  }
 }
