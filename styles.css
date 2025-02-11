@@ -19,6 +19,7 @@ html {
 
 body {
   background-color: #1c1918;
+  text-align: center;
 }
 
 /*  *** NAVBAR START ***  */
@@ -70,6 +71,18 @@ nav svg {
 
 /*  *** NAVBAR END ***  */
 
+.intro {
+  padding-top: 20px;
+}
+
+.intro h1 {
+  color: #f2c744;
+}
+.intro p {
+  margin-top: 20px;
+  color: aliceblue;
+}
+
 /*  *** GALLERY START ***  */
 
 .container {
@@ -78,9 +91,82 @@ nav svg {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px 8%;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
   padding: 50px 8%;
 }
 
+.gallery figure {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: rgb(41, 40, 40);
+  text-align: center;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px 5px 0 0;
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+
+.gallery img:hover {
+  transform: scale(1.2);
+  transition-delay: 0s;
+  transition-duration: 0.7s;
+}
+
+.gallery figcaption {
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  font-size: 0.5rem;
+  text-align: center;
+}
+
+.gallery figcaption h3 {
+  margin: 0 0 3px 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.gallery figcaption p {
+  margin: 0;
+  font-size: 0.7rem;
+  color: white;
+}
+
+/* Effet au survol */
+.gallery figure {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery figcaption {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  transition: bottom 0.3s ease;
+}
+
+.gallery figure:hover figcaption {
+  bottom: 0;
+}
+/*
 .gallery {
   display: grid;
   padding: 50px 8%;
@@ -102,9 +188,11 @@ nav svg {
 }
 
 .gallery img:hover {
-  filter: grayscale(75%);
-  transform: scale(1.1);
+  transform: scale(1.5);
+  transition-delay: 0s;
+  transition-duration: 0.5s;
 }
+*/
 /*  *** GALLERY END ***  */
 
 /*  *** RESPONSIVE START ***  */
@@ -156,5 +244,19 @@ nav svg {
 /* NAVBAR END */
 
 /* GALLERY RESPONSIVE */
+/* Media Query pour les smartphones (moins de 480px) */
+@media (max-width: 480px) {
+  .gallery figcaption {
+    padding: 8px; /* Réduire légèrement le padding */
+    font-size: 1rem; /* Augmenter la taille de la police */
+  }
 
+  .gallery figcaption h3 {
+    font-size: 1.2rem; /* Taille de police plus grande pour les titres */
+  }
+
+  .gallery figcaption p {
+    font-size: 1rem; /* Taille de police plus grande pour les légendes */
+  }
+}
 /*  *** RESPONSIVE END ***  */
