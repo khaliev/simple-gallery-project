@@ -96,8 +96,8 @@ nav svg {
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 30px;
-  padding: 50px 8%;
+  gap: 10px;
+  padding: 30px 8%;
 }
 
 .gallery figure {
@@ -166,6 +166,22 @@ nav svg {
 .gallery figure:hover figcaption {
   bottom: 0;
 }
+
+footer {
+  width: 90%;
+  margin: auto;
+  color: var(--text-color);
+  font-size: 12px;
+  background-color: var(--color-1);
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: relative;
+  border-radius: 0.5rem;
+}
+
 /*
 .gallery {
   display: grid;
