@@ -182,33 +182,6 @@ footer {
   border-radius: 0.5rem;
 }
 
-/*
-.gallery {
-  display: grid;
-  padding: 50px 8%;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  padding: 50px 8%;
-  justify-content: center;
-  gap: 20px;
-}
-.gallery img {
-  width: 100%;
-  padding: 0.5em;
-  border: 1px solid rgb(162, 162, 162);
-  border-radius: 5px;
-  background-color: rgb(41, 40, 40);
-  text-align: center;
-  justify-items: center;
-  object-fit: cover;
-  aspect-ratio: 1;
-}
-
-.gallery img:hover {
-  transform: scale(1.5);
-  transition-delay: 0s;
-  transition-duration: 0.5s;
-}
-*/
 /*  *** GALLERY END ***  */
 
 /*  *** RESPONSIVE START ***  */
@@ -260,19 +233,19 @@ footer {
 /* NAVBAR END */
 
 /* GALLERY RESPONSIVE */
-/* Media Query pour les smartphones (moins de 480px) */
+
 @media (max-width: 480px) {
   .gallery figcaption {
-    padding: 8px; /* Réduire légèrement le padding */
-    font-size: 1rem; /* Augmenter la taille de la police */
+    padding: 8px;
+    font-size: 1rem;
   }
 
   .gallery figcaption h3 {
-    font-size: 1.2rem; /* Taille de police plus grande pour les titres */
+    font-size: 1.2rem;
   }
 
   .gallery figcaption p {
-    font-size: 1rem; /* Taille de police plus grande pour les légendes */
+    font-size: 1rem;
   }
 }
 /*  *** RESPONSIVE END ***  */
